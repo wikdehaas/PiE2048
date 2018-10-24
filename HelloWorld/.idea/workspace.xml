@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ae017f2-675a-4933-882b-01b70d497246" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -51,7 +50,7 @@
     <session id="-1162657174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.opened" value="2" />
         </counts>
@@ -69,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -156,7 +155,7 @@
       <workItem from="1538569880719" duration="1131000" />
       <workItem from="1539172602829" duration="4509000" />
       <workItem from="1540393702659" duration="154000" />
-      <workItem from="1540393876033" duration="3000" />
+      <workItem from="1540393876033" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="va;lksjf">
       <created>1540393752556</created>
@@ -165,11 +164,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540393752556</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="va;lksjf">
+      <created>1540393885906</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540393885906</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5797000" />
+    <option name="totallyTimeSpent" value="5808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -214,7 +220,7 @@
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
