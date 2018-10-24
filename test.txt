@@ -2,4 +2,8 @@ Yo, werkt dit nou?
 Geen idee
 
 
+<<<<<<< HEAD
 Im ga hier iets aanpassen
+=======
+fdah;lkdsa
+>>>>>>> 508cb9246de46acc52757bd664da3cf5f2e3bb28
