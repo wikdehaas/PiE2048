@@ -11,7 +11,6 @@ int main ( )
 }
 int  add ( int a , int b)
 {
-    a=a+b ;
     return a ;
 }
 int add2 ( int &a , int &b)
