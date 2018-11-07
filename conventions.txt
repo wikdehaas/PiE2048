@@ -1,0 +1,24 @@
+using namespace std
+
+
+functions: 
+
+int newFunction () {
+
+}
+
+
+constant variables:
+const int NEW_VARIABLE
+
+variables:
+int newVariable
+
+classes:
+class NewClass {
+
+};
+
+instances:
+NewClass appleTree
+
