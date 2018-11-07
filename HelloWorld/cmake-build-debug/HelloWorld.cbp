@@ -80,7 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/main.cpp">
+		<Unit filename="C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/InputTest.cpp">
+			<Option target="HelloWorld"/>
+		</Unit>
+		<Unit filename="C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/game2048.cpp">
 			<Option target="HelloWorld"/>
 		</Unit>
 		<Unit filename="C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/CMakeLists.txt">

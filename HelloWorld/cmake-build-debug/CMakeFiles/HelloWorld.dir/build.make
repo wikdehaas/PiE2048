@@ -56,32 +56,47 @@ include CMakeFiles/HelloWorld.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/HelloWorld.dir/flags.make
 
-CMakeFiles/HelloWorld.dir/main.cpp.obj: CMakeFiles/HelloWorld.dir/flags.make
-CMakeFiles/HelloWorld.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HelloWorld.dir/main.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\HelloWorld.dir\main.cpp.obj -c C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\main.cpp
+CMakeFiles/HelloWorld.dir/game2048.cpp.obj: CMakeFiles/HelloWorld.dir/flags.make
+CMakeFiles/HelloWorld.dir/game2048.cpp.obj: ../game2048.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HelloWorld.dir/game2048.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\HelloWorld.dir\game2048.cpp.obj -c C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\game2048.cpp
 
-CMakeFiles/HelloWorld.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/main.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\main.cpp > CMakeFiles\HelloWorld.dir\main.cpp.i
+CMakeFiles/HelloWorld.dir/game2048.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/game2048.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\game2048.cpp > CMakeFiles\HelloWorld.dir\game2048.cpp.i
 
-CMakeFiles/HelloWorld.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/main.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\main.cpp -o CMakeFiles\HelloWorld.dir\main.cpp.s
+CMakeFiles/HelloWorld.dir/game2048.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/game2048.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\game2048.cpp -o CMakeFiles\HelloWorld.dir\game2048.cpp.s
+
+CMakeFiles/HelloWorld.dir/InputTest.cpp.obj: CMakeFiles/HelloWorld.dir/flags.make
+CMakeFiles/HelloWorld.dir/InputTest.cpp.obj: ../InputTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HelloWorld.dir/InputTest.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\HelloWorld.dir\InputTest.cpp.obj -c C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\InputTest.cpp
+
+CMakeFiles/HelloWorld.dir/InputTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/InputTest.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\InputTest.cpp > CMakeFiles\HelloWorld.dir\InputTest.cpp.i
+
+CMakeFiles/HelloWorld.dir/InputTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/InputTest.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\InputTest.cpp -o CMakeFiles\HelloWorld.dir\InputTest.cpp.s
 
 # Object files for target HelloWorld
 HelloWorld_OBJECTS = \
-"CMakeFiles/HelloWorld.dir/main.cpp.obj"
+"CMakeFiles/HelloWorld.dir/game2048.cpp.obj" \
+"CMakeFiles/HelloWorld.dir/InputTest.cpp.obj"
 
 # External object files for target HelloWorld
 HelloWorld_EXTERNAL_OBJECTS =
 
-HelloWorld.exe: CMakeFiles/HelloWorld.dir/main.cpp.obj
+HelloWorld.exe: CMakeFiles/HelloWorld.dir/game2048.cpp.obj
+HelloWorld.exe: CMakeFiles/HelloWorld.dir/InputTest.cpp.obj
 HelloWorld.exe: CMakeFiles/HelloWorld.dir/build.make
 HelloWorld.exe: CMakeFiles/HelloWorld.dir/linklibs.rsp
 HelloWorld.exe: CMakeFiles/HelloWorld.dir/objects1.rsp
 HelloWorld.exe: CMakeFiles/HelloWorld.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable HelloWorld.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\wik\Documents\GitHub\PiE2048\HelloWorld\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable HelloWorld.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\HelloWorld.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

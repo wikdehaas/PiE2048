@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/main.cpp" "C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/cmake-build-debug/CMakeFiles/HelloWorld.dir/main.cpp.obj"
+  "C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/InputTest.cpp" "C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/cmake-build-debug/CMakeFiles/HelloWorld.dir/InputTest.cpp.obj"
+  "C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/game2048.cpp" "C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/cmake-build-debug/CMakeFiles/HelloWorld.dir/game2048.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

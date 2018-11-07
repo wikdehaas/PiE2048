@@ -122,32 +122,59 @@ HelloWorld/fast:
 	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/build
 .PHONY : HelloWorld/fast
 
-main.obj: main.cpp.obj
+InputTest.obj: InputTest.cpp.obj
 
-.PHONY : main.obj
+.PHONY : InputTest.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+InputTest.cpp.obj:
+	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/InputTest.cpp.obj
+.PHONY : InputTest.cpp.obj
 
-main.i: main.cpp.i
+InputTest.i: InputTest.cpp.i
 
-.PHONY : main.i
+.PHONY : InputTest.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/main.cpp.i
-.PHONY : main.cpp.i
+InputTest.cpp.i:
+	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/InputTest.cpp.i
+.PHONY : InputTest.cpp.i
 
-main.s: main.cpp.s
+InputTest.s: InputTest.cpp.s
 
-.PHONY : main.s
+.PHONY : InputTest.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/main.cpp.s
-.PHONY : main.cpp.s
+InputTest.cpp.s:
+	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/InputTest.cpp.s
+.PHONY : InputTest.cpp.s
+
+game2048.obj: game2048.cpp.obj
+
+.PHONY : game2048.obj
+
+# target to build an object file
+game2048.cpp.obj:
+	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/game2048.cpp.obj
+.PHONY : game2048.cpp.obj
+
+game2048.i: game2048.cpp.i
+
+.PHONY : game2048.i
+
+# target to preprocess a source file
+game2048.cpp.i:
+	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/game2048.cpp.i
+.PHONY : game2048.cpp.i
+
+game2048.s: game2048.cpp.s
+
+.PHONY : game2048.s
+
+# target to generate assembly for a file
+game2048.cpp.s:
+	$(MAKE) -f CMakeFiles\HelloWorld.dir\build.make CMakeFiles/HelloWorld.dir/game2048.cpp.s
+.PHONY : game2048.cpp.s
 
 # Help Target
 help:
@@ -158,9 +185,12 @@ help:
 	@echo ... HelloWorld
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... InputTest.obj
+	@echo ... InputTest.i
+	@echo ... InputTest.s
+	@echo ... game2048.obj
+	@echo ... game2048.i
+	@echo ... game2048.s
 .PHONY : help
 
 
