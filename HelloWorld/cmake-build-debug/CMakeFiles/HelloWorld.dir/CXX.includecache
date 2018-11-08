@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/InputTest.cpp
-iostream
--
-valarray
--
-vector
--
-
 C:/Users/wik/Documents/GitHub/PiE2048/HelloWorld/game2048.cpp
 iostream
 -
