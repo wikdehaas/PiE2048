@@ -7,25 +7,27 @@
 
 #include <string>
 #include "Board2048.h"
-#include "HumanPlayer.h"
-#include "ComputerPlayer.h"
+//#include "HumanPlayer.h"
+//#include "ComputerPlayer.h"
 #include "Player.h"
+#include "Update.h"
 
 using namespace std;
 
-class Game2048 {
+class Game2048 : public Update{
     unsigned const int SIZE = 4;
     bool gameOver = false;
     string inputPlayerType;
     vector<char> posDir;
 
-    void choosePlayerType() {
+    Player choosePlayerType() {
+        Player player;
         ComputerPlayer CP;
         HumanPlayer HP;
         cout << "What is the player type? Computer or human?" << endl;
         cin >> inputPlayerType;
         if (inputPlayerType == "computer" || inputPlayerType == "Computer") {
-            Player *player = &CP;
+            Player* player = &CP;
             cout << "Computer chosen." << endl;
         }
         else {  if(inputPlayerType == "human" || inputPlayerType == "Human"){
@@ -37,11 +39,11 @@ class Game2048 {
                 cout << "Unknown input given. Human player assumed" << endl;
             }
         }
-
+    return player;
     }
 
     bool checkGameOver() {
-        posDir = update.getDirections();
+        posDir = getDirections();
         if (posDir.empty()) {
             return true;
         }
@@ -50,7 +52,7 @@ class Game2048 {
 
 public:
     void runGame() {
-        choosePlayerType();
+        Player player = choosePlayerType();
         Board2048 board;
 
 
