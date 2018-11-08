@@ -3,5 +3,7 @@
 
 CMakeFiles/2048.dir/main.cpp.obj: ../Board2048.h
 CMakeFiles/2048.dir/main.cpp.obj: ../Game2048.h
+CMakeFiles/2048.dir/main.cpp.obj: ../Player.h
+CMakeFiles/2048.dir/main.cpp.obj: ../Update.h
 CMakeFiles/2048.dir/main.cpp.obj: ../main.cpp
 

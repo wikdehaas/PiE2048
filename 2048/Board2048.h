@@ -9,11 +9,11 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include "Game2048.h"
 
 using namespace std;
 
-
-class Board2048 {
+class Board2048 : public Game2048 {
     unsigned int size;
     vector<int> boardVector;
     vector<int> emptyTileIndices;
@@ -30,11 +30,11 @@ class Board2048 {
     }
 
 public:
-    void setSize(unsigned int s) {
+    void setBoardSize(unsigned const int s) {
         size = s;
     }
 
-    int getSize() {
+    int getBoardSize() {
         return size;
     }
 
