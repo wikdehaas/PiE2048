@@ -26,24 +26,48 @@ Board createBoard(){
     }
     return board;
 }
+class Player {
+public:
+    virtual char getInput();
+};
 
-char userInput(){
-    char direction = 'O';
-    char c;
-    cout<<"Input your wanted direction! (w,a,s,d)"<<endl;
-    while (direction == 'O'){
-        cin>>c;
-        if (c != 'w' && c != 'a' && c != 's' && c != 'd') {
-            cout<<"This is not a correct input!"<<endl;
-        } else {
-            direction = c;
-        }
+class ComputerPlayer : public Player {
+public:
+    char getInput() {
+        char direction = 'O';
+        return direction;
     }
-    return direction;
-}
+};
+
+class HumanPlayer : public Player {
+public:
+    char getInput() {
+        char direction = 'O';
+        char c;
+        cout << "Input your wanted direction! (w,a,s,d)" << endl;
+        while (direction == 'O') {
+            cin >> c;
+            if (c != 'w' && c != 'a' && c != 's' && c != 'd') {
+                cout << "This is not a correct input!" << endl;
+            } else {
+                direction = c;
+            }
+        }
+        return direction;
+    }
+};
 
 int main ( )
 {
     Board board = createBoard();
+    ComputerPlayer CP;
+    HumanPlayer HP;
+    Player* player = &CP;
+    char a = player->getInput();
+    cout<< a<<endl;
+    player = &HP;
+    a = player->getInput();
+    cout<< a << endl;
+
 
 }
