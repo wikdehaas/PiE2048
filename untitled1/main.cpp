@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <string>
 
 using namespace std ;
 
@@ -20,6 +19,7 @@ void plot_matrix(vector<int> matrix){
 // --------------------------------------------------------------------
 // --------------- Class ----------------------------------------------
 // --------------------------------------------------------------------
+
 class update{
     // --------------- variables -------------------------------------------
 
@@ -28,9 +28,10 @@ class update{
     vector<char> valid_directions;
     vector< vector<int>> allMatrix;
     vector<int> temp_mat;
-    int counter;
+    int score = 0;
 
-      // --------------- Function which inverts vector -------------------------------------------
+
+    // --------------- Function which inverts vector -------------------------------------------
     template <class BidirectionalIterator>
     void reverse (BidirectionalIterator first, BidirectionalIterator last)
     {
@@ -50,13 +51,15 @@ class update{
         return tempVec;
     }
     // --------------- Function which shifts vector -------------------------------------------
-    vector<int> shiftVector(vector<int> tempVec, int& score) {
+    vector<int> shiftVector(vector<int> tempVec) {
+
         tempVec = removeZeroes(tempVec);
         for (unsigned j = 0; j < (tempVec.size() - 1); j++) {
+            int points = 0;
             if (tempVec[j] == tempVec[j + 1]) {
                 tempVec[j] = tempVec[j] * 2;
                 tempVec[j + 1] = 0;
-                score = score + tempVec[j];
+                addPoint(points + tempVec[j]);
             }
         }
         tempVec = removeZeroes(tempVec);
@@ -65,7 +68,8 @@ class update{
     }
 
     // --------------- Function which updates matrix -------------------------------------------
-    vector<int> updateMatrix(vector<int> matrix, char direction, int& score ){
+    vector<int> updateMatrix(vector<int> matrix, char direction){
+        score = 0;
         switch(direction) {
             case 'w':
                 for (int i = 0; i < SIZE; i++) {
@@ -73,7 +77,7 @@ class update{
                     for (unsigned j = 0; j < tempVec.size(); j++) {
                         tempVec.at(j) = matrix[i + j * SIZE];
                     }
-                    tempVec = shiftVector(tempVec, score);
+                    tempVec = shiftVector(tempVec);
                     for (int j = 0; j != tempVec.size(); ++j) {
                         matrix[i + j * SIZE] = tempVec[j];
                     }
@@ -85,7 +89,7 @@ class update{
                     for (unsigned j = 0; j < tempVec.size(); j++) {
                         tempVec.at(j) = matrix[i * SIZE + j];
                     }
-                    tempVec = shiftVector(tempVec, score);
+                    tempVec = shiftVector(tempVec);
                     for (int j = 0; j != tempVec.size(); ++j) {
                         matrix[i * SIZE + j] = tempVec[j];
                     }
@@ -99,7 +103,7 @@ class update{
                         tempVec.at(j) = matrix[i + j * SIZE];
                     }
                     std::reverse(tempVec.begin(), tempVec.end());
-                    tempVec = shiftVector(tempVec,score);
+                    tempVec = shiftVector(tempVec);
                     std::reverse(tempVec.begin(), tempVec.end());
 
                     for (int j = 0; j != tempVec.size(); ++j) {
@@ -116,7 +120,7 @@ class update{
                     }
 
                     std::reverse(tempVec.begin(), tempVec.end());
-                    tempVec = shiftVector(tempVec,score);
+                    tempVec = shiftVector(tempVec);
                     std::reverse(tempVec.begin(), tempVec.end());
 
                     for (int j = 0; j != tempVec.size(); ++j) {
@@ -129,36 +133,39 @@ class update{
         }
     }
 
+    int addPoint(int points){
+        score = score + points;
+        return score;
+
+    }
+
 public:
 
     vector<char> getDirections(){
         return valid_directions;
     }
 
-    void getVectors(vector<int> matrix, int score){
-        int score_temp;
+    void getVectors(vector<int> matrix, int direction){
+        int counter = 0;
         valid_directions.clear();
         allMatrix.clear();
         score_vec.clear();
-        counter = 0;
 
-        //matrix = get board
-        //get score
         for (int i = 0; i < SIZE; i++){
-            score_temp=score;
-            temp_mat = updateMatrix( matrix, ALLDIR[i], score_temp);
+            temp_mat = updateMatrix( matrix, ALLDIR[i]);
             if (temp_mat == matrix){
 
             }else{
                 valid_directions.push_back(ALLDIR[i]);
                 allMatrix.push_back(temp_mat);
-                score_vec.push_back(score_temp);
+
+                score_vec.push_back(score);
                 counter++;
             }
         }
     }
 
-    vector<int> getpoints(){
+    vector<int> getPoints(){
         return score_vec;
     }
 };
@@ -170,7 +177,7 @@ int main() {
     update vector1;
     vector1.getVectors(matrix, 12);
 
-    vector<int> test = vector1.getpoints();
+    vector<int> test = vector1.getPoints();
     vector<char> test2 = vector1.getDirections();
 
     for(auto &i: test2)
