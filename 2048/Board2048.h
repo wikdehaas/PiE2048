@@ -9,67 +9,36 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-#include "Game2048.h"
+//#include "Game2048.h"
 
 using namespace std;
 
-class Board2048 : public Game2048 {
+class Board2048 {
+//public:
+
     unsigned int size;
     vector<int> boardVector;
     vector<int> emptyTileIndices;
     unsigned int newTileChance;
 
-    vector<int> checkEmpty(vector<int> v) {
-        vector<int> z;
-        for (int i = 0; i<v.size();i++) {
-            if (v[i]==0) {
-                z.push_back(i);
-            }
-        }
-        return z;
-    }
+    vector<int> checkEmpty(vector<int> v);
 
 public:
-    void setBoardSize(unsigned const int s) {
-        size = s;
-    }
+    Board2048() = default;
+    Board2048(const unsigned int);
+    void setBoardSize(unsigned const int s);
 
-    int getBoardSize() {
-        return size;
-    }
+    int getBoardSize();
 
-    void setBoard(vector<int> v) {
-        boardVector = v;
-    }
+    void setBoard(vector<int> v);
 
-    vector<int> getBoard() {
-        return boardVector;
-    }
+    vector<int> getBoard();
 
-    void createBoard() {
-        boardVector.resize(size*size);
-        fill(boardVector.begin(), boardVector.end(), 0);
-    }
+    void createBoard();
 
-    void addRandomTile() {
-        emptyTileIndices = checkEmpty(getBoard());
-        srand(time(NULL));
-        int sizeETI = emptyTileIndices.size();
-        int indETI = rand() % sizeETI;
-        int indBV = emptyTileIndices[indETI];
-        newTileChance = rand() % sizeETI;
-        boardVector[indBV] = (newTileChance <= 0.1*(double)sizeETI) ? 4 : 2;
-    }
+    void addRandomTile();
 
-    void visualizeBoard(vector<int> v) {
-        for (int i = 0; i < size; i++){
-            for (int k = 0; k < size; k++) {
-                cout << v[size*i+k] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-    }
+    void visualizeBoard(vector<int> v);
 };
 
 
