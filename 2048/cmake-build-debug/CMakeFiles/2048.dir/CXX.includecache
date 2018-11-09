@@ -15,14 +15,14 @@ cstdlib
 -
 ctime
 -
-Game2048.h
-C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h
 
 C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h
+iostream
+-
 string
 -
-Board2048.h
-C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.h
+vector
+-
 Player.h
 C:/Users/user/Documents/GitHub/PiE2048/2048/Player.h
 
@@ -41,12 +41,12 @@ vector
 -
 algorithm
 -
+string
+-
 Board2048.h
 C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.h
 
 C:/Users/user/Documents/GitHub/PiE2048/2048/main.cpp
-iostream
--
 Game2048.h
 C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h
 
