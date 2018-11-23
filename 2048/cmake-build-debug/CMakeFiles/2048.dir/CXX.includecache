@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.cpp
+Board2048.h
+C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.h
+iostream
+-
+iomanip
+-
+vector
+-
+cstdlib
+-
+ctime
+-
+
 C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.h
 iostream
 -
@@ -46,6 +60,20 @@ vector
 string
 -
 
+C:/Users/user/Documents/GitHub/PiE2048/2048/Player.cpp
+Player.h
+C:/Users/user/Documents/GitHub/PiE2048/2048/Player.h
+iostream
+-
+vector
+-
+valarray
+-
+algorithm
+-
+iterator
+-
+
 C:/Users/user/Documents/GitHub/PiE2048/2048/Player.h
 iostream
 -
@@ -56,6 +84,16 @@ valarray
 Update.h
 C:/Users/user/Documents/GitHub/PiE2048/2048/Update.h
 
+C:/Users/user/Documents/GitHub/PiE2048/2048/Update.cpp
+Update.h
+C:/Users/user/Documents/GitHub/PiE2048/2048/Update.h
+vector
+-
+valarray
+-
+algorithm
+-
+
 C:/Users/user/Documents/GitHub/PiE2048/2048/Update.h
 vector
 -
@@ -65,4 +103,8 @@ string
 -
 Board2048.h
 C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.h
+
+C:/Users/user/Documents/GitHub/PiE2048/2048/main.cpp
+Game2048.h
+C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h
 
