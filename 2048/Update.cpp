@@ -20,7 +20,6 @@ Update::Update() {
  * Output:
  *      - vector without zero values.
  */
-
 vector<int> Update::removeZeroes(vector<int> tempVec) {
     vector<int> emptyZeroes;
     for(auto i:tempVec) {
