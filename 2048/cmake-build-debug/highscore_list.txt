@@ -1,0 +1,6 @@
+Computer    4004
+Computer    4356
+Computer    6408
+Computer    2972
+Computer    9328
+Computer    7288

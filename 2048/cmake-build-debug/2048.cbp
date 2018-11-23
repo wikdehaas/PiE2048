@@ -80,6 +80,36 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.cpp">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.h">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.cpp">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Highscore.cpp">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Highscore.h">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Player.cpp">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Player.h">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Update.cpp">
+			<Option target="2048"/>
+		</Unit>
+		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/Update.h">
+			<Option target="2048"/>
+		</Unit>
 		<Unit filename="C:/Users/user/Documents/GitHub/PiE2048/2048/main.cpp">
 			<Option target="2048"/>
 		</Unit>

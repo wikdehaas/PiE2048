@@ -7,22 +7,13 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-//#include "Game2048.h"
 
 using namespace std;
 
-//class Board2048 : public Game2048 {
-//    unsigned int size;
-//    vector<int> boardVector;
-//    vector<int> emptyTileIndices;
-//    unsigned int newTileChance;
-//    Board2048::Board2048() {}
-    Board2048::Board2048(const unsigned int SIZE) {
-        Board2048::setBoardSize(SIZE);
+    Board2048::Board2048() {
         Board2048::createBoard();
         Board2048::addRandomTile();
-        Board2048::addRandomTile();
-        Board2048::visualizeBoard(Board2048::getBoard());
+        Board2048::setScore(0);
     }
 
     vector<int> Board2048::checkEmpty(vector<int> v) {
@@ -35,16 +26,7 @@ using namespace std;
         return z;
     }
 
-//public:
-    void Board2048::setBoardSize(const unsigned int s) {
-        size = s;
-    }
-
-    int Board2048::getBoardSize() {
-        return size;
-    }
-
-    void Board2048::setBoard(vector<int> v) {
+    void Board2048::setBoard(vector<int> &v) {
         boardVector = v;
     }
 
@@ -53,27 +35,57 @@ using namespace std;
     }
 
     void Board2048::createBoard() {
-        boardVector.resize(size*size);
+        boardVector.resize(SIZE*SIZE);
         fill(boardVector.begin(), boardVector.end(), 0);
     }
 
     void Board2048::addRandomTile() {
-        emptyTileIndices = checkEmpty(getBoard());
-        srand(time(NULL));
+        vector<int> emptyTileIndices = checkEmpty(getBoard());
+        srand((unsigned)(time(nullptr)));
         int sizeETI = emptyTileIndices.size();
         int indETI = rand() % sizeETI;
         int indBV = emptyTileIndices[indETI];
-        newTileChance = rand() % sizeETI;
+        int newTileChance = rand() % sizeETI;
         boardVector[indBV] = (newTileChance <= 0.1*(double)sizeETI) ? 4 : 2;
     }
 
     void Board2048::visualizeBoard(vector<int> v) {
-        for (int i = 0; i < size; i++){
-            for (int k = 0; k < size; k++) {
-                cout << v[size*i+k] << " ";
+        const int maxSpaces = 5;
+        for (int i = 0; i < SIZE; i++){
+            for (int k = 0; k < SIZE; k++) {
+                cout << v[SIZE*i+k];
+                for(int j =0;j<(maxSpaces-to_string(v[SIZE*i+k]).length());j++)
+                    cout<<" ";
             }
             cout << endl;
         }
         cout << endl;
     }
-//};
+
+    void Board2048::setGameOver(bool go){
+        gameOver = go;
+    }
+
+    bool Board2048::getGameOver(){
+        return gameOver;
+    }
+
+    void Board2048::setScore( int s) {
+        totalScore = s;
+    }
+
+    void Board2048::addScore(int score) {
+        totalScore += score;
+    }
+
+    int Board2048::getScore() {
+        return totalScore;
+    }
+
+    void Board2048::setTempScore(vector<int> &scoreVec) {
+        tempScore = scoreVec;
+    }
+
+    vector<int> Board2048::getTempScore() {
+        return tempScore;
+    }

@@ -9,37 +9,30 @@
 #include <vector>
 #include <valarray>
 #include "Update.h"
-//#include "Board2048.h"
+
 using namespace std;
 
 class Player : public Update {
-    vector<int> newBoard;
+    string name;
 public:
-    Player();
-    virtual vector<int> getInput(Board2048 board2048);
-
-    void setNewBoard(vector<int> b);
-
-    vector<int> getNewBoard();
+    Player() = default;
+    virtual vector<int> getInput(Board2048 &board2048);
+    void setName(string &n);
+    string getName();
 };
 
 class ComputerPlayer : public Player {
+    int nextStep(vector<int> &nextBoard);
+    int boardValueFun(vector<int> currBoard, int score);
 public:
-    ComputerPlayer();
-    vector<int> getInput(Board2048 board2048);
+    ComputerPlayer() = default;
+    vector<int> getInput(Board2048 &board2048) override;
 };
 
 class HumanPlayer : public Player {
-private:
-    bool goodInput;
-    vector<char> dirOptions;
-    vector<vector<int>> vecOptions;
-    char c;
-    int index;
-
 public:
-    HumanPlayer();
-    vector<int> getInput(Board2048 board2048);
+    HumanPlayer() = default;
+    vector<int> getInput(Board2048 &board2048) override;
 };
 
 

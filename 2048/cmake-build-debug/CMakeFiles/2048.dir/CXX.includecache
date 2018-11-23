@@ -16,6 +16,18 @@ cstdlib
 ctime
 -
 
+C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.cpp
+iostream
+-
+iomanip
+-
+string
+-
+vector
+-
+Game2048.h
+C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h
+
 C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h
 iostream
 -
@@ -25,6 +37,14 @@ vector
 -
 Player.h
 C:/Users/user/Documents/GitHub/PiE2048/2048/Player.h
+Highscore.h
+C:/Users/user/Documents/GitHub/PiE2048/2048/Highscore.h
+
+C:/Users/user/Documents/GitHub/PiE2048/2048/Highscore.h
+vector
+-
+string
+-
 
 C:/Users/user/Documents/GitHub/PiE2048/2048/Player.h
 iostream
@@ -45,8 +65,4 @@ string
 -
 Board2048.h
 C:/Users/user/Documents/GitHub/PiE2048/2048/Board2048.h
-
-C:/Users/user/Documents/GitHub/PiE2048/2048/main.cpp
-Game2048.h
-C:/Users/user/Documents/GitHub/PiE2048/2048/Game2048.h
 
