@@ -22,6 +22,7 @@
 using namespace std;
 
 class Board2048 {
+private:
     //Private variables
     vector<int> boardVector; //The elements on the board in one vector (rows added after each other)
     bool gameOver; //Game over check

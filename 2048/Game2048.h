@@ -21,6 +21,7 @@
 using namespace std;
 
 class Game2048 {
+private:
     //Private variables
     Player* player; //Player pointer
     const int maxNameLength = 15; //Max character length of name
