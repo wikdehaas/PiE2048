@@ -12,21 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca205532-a883-45dd-8e66-5813ad242b54" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/Board2048.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2048/Board2048.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/Board2048.h" beforeDir="false" afterPath="$PROJECT_DIR$/2048/Board2048.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/Game2048.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2048/Game2048.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/Game2048.h" beforeDir="false" afterPath="$PROJECT_DIR$/2048/Game2048.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/2048.exe" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/2048.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Board2048.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Board2048.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Game2048.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Game2048.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Player.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Player.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Update.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/Update.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/CMakeFiles/2048.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/cmake-build-debug/highscore_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2048/cmake-build-debug/highscore_list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2048/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2048/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2048/Update.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2048/Update.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2048/Update.h" beforeDir="false" afterPath="$PROJECT_DIR$/2048/Update.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/2048/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,29 +55,29 @@
         <counts>
           <entry key="Makefile" value="3" />
           <entry key="Makefile2" value="1" />
-          <entry key="cpp" value="32" />
-          <entry key="h" value="24" />
+          <entry key="cpp" value="34" />
+          <entry key="h" value="25" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="6" />
-          <entry key="ObjectiveC" value="56" />
+          <entry key="ObjectiveC" value="59" />
           <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="16683" />
-          <entry key="h" value="5421" />
+          <entry key="cpp" value="16717" />
+          <entry key="h" value="6041" />
           <entry key="txt" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="39" />
-          <entry key="ObjectiveC" value="22104" />
+          <entry key="ObjectiveC" value="22758" />
           <entry key="PLAIN_TEXT" value="45" />
         </counts>
       </usages-collector>
@@ -110,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2048/Game2048.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="111">
               <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
@@ -129,9 +116,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2048/Update.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2048/Update.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#93#110#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2048/Highscore.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
+            <state relative-caret-position="-102">
               <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
               <folding>
                 <element signature="e#100#117#0" expanded="true" />
@@ -152,22 +163,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2048/Board2048.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="41" />
-              <folding>
-                <element signature="e#111#130#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2048/Board2048.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="2873">
               <caret line="169" column="65" selection-start-line="169" selection-start-column="65" selection-end-line="169" selection-end-column="65" />
               <folding>
                 <element signature="e#40#62#0" expanded="true" />
@@ -177,21 +185,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2048/Player.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-              <folding>
-                <element signature="e#93#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2048/Player.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1054">
+            <state relative-caret-position="221">
               <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
                 <element signature="e#40#59#0" expanded="true" />
@@ -217,6 +213,7 @@
       <find>addScore</find>
       <find>emptyTile</find>
       <find>getHigh</find>
+      <find>std::</find>
     </findStrings>
     <replaceStrings>
       <replace>size</replace>
@@ -235,8 +232,6 @@
         <option value="$PROJECT_DIR$/Update.h" />
         <option value="$PROJECT_DIR$/2048/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/2048/Player.h" />
-        <option value="$PROJECT_DIR$/2048/Update.h" />
-        <option value="$PROJECT_DIR$/2048/Update.cpp" />
         <option value="$PROJECT_DIR$/2048/Highscore.cpp" />
         <option value="$PROJECT_DIR$/2048/Highscore.h" />
         <option value="$PROJECT_DIR$/2048/cmake-build-debug/highscore_list.txt" />
@@ -246,6 +241,8 @@
         <option value="$PROJECT_DIR$/2048/Game2048.cpp" />
         <option value="$PROJECT_DIR$/2048/Board2048.h" />
         <option value="$PROJECT_DIR$/2048/Game2048.h" />
+        <option value="$PROJECT_DIR$/2048/Update.cpp" />
+        <option value="$PROJECT_DIR$/2048/Update.h" />
       </list>
     </option>
   </component>
@@ -344,12 +341,12 @@
       <workItem from="1542377281160" duration="466000" />
       <workItem from="1542873858637" duration="19485000" />
       <workItem from="1542960198861" duration="1084000" />
-      <workItem from="1542961643519" duration="11387000" />
+      <workItem from="1542961643519" duration="12233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84084000" />
+    <option name="totallyTimeSpent" value="84930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -364,12 +361,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1108742" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1108742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -417,7 +414,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Player.cpp" />
     <entry file="file://$PROJECT_DIR$/Player.h" />
-    <entry file="file://$PROJECT_DIR$/Update.cpp" />
     <entry file="file://$PROJECT_DIR$/untitled1/main.cpp" />
     <entry file="file://$PROJECT_DIR$/Update.h" />
     <entry file="file://C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/i686-w64-mingw32/include/uxtheme.h">
@@ -455,13 +451,6 @@
     <entry file="file://$PROJECT_DIR$/2048/Score2048.h" />
     <entry file="file://$PROJECT_DIR$/2048/Score2048.cpp" />
     <entry file="file://$PROJECT_DIR$/2048/Input.cpp" />
-    <entry file="file://$PROJECT_DIR$/2048/Update.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2048/cmake-build-debug/highscore_list.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -479,33 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2048/Highscore.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-          <folding>
-            <element signature="e#100#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2048/Update.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2048/Player.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1054">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2048/Highscore.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -513,23 +475,6 @@
           <folding>
             <element signature="e#41#60#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2048/Board2048.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="41" />
-          <folding>
-            <element signature="e#111#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2048/Game2048.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -550,13 +495,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Update.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="15" lean-forward="true" selection-end-line="182" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/Update.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/2048/Board2048.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="2873">
           <caret line="169" column="65" selection-start-line="169" selection-start-column="65" selection-end-line="169" selection-end-column="65" />
           <folding>
             <element signature="e#40#62#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/Player.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/Game2048.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/Update.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#93#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/Highscore.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+          <folding>
+            <element signature="e#100#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/Board2048.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
