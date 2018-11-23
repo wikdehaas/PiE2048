@@ -3,4 +3,9 @@ project(2048)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(2048 main.cpp)
+add_executable(2048 main.cpp
+                    Game2048.cpp
+                    Board2048.cpp
+                    Update.cpp
+                    Player.cpp
+                    Highscore.cpp)

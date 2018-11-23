@@ -38,10 +38,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -122,6 +122,141 @@ depend:
 	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/build
 .PHONY : 2048/fast
 
+Board2048.obj: Board2048.cpp.obj
+
+.PHONY : Board2048.obj
+
+# target to build an object file
+Board2048.cpp.obj:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Board2048.cpp.obj
+.PHONY : Board2048.cpp.obj
+
+Board2048.i: Board2048.cpp.i
+
+.PHONY : Board2048.i
+
+# target to preprocess a source file
+Board2048.cpp.i:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Board2048.cpp.i
+.PHONY : Board2048.cpp.i
+
+Board2048.s: Board2048.cpp.s
+
+.PHONY : Board2048.s
+
+# target to generate assembly for a file
+Board2048.cpp.s:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Board2048.cpp.s
+.PHONY : Board2048.cpp.s
+
+Game2048.obj: Game2048.cpp.obj
+
+.PHONY : Game2048.obj
+
+# target to build an object file
+Game2048.cpp.obj:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Game2048.cpp.obj
+.PHONY : Game2048.cpp.obj
+
+Game2048.i: Game2048.cpp.i
+
+.PHONY : Game2048.i
+
+# target to preprocess a source file
+Game2048.cpp.i:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Game2048.cpp.i
+.PHONY : Game2048.cpp.i
+
+Game2048.s: Game2048.cpp.s
+
+.PHONY : Game2048.s
+
+# target to generate assembly for a file
+Game2048.cpp.s:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Game2048.cpp.s
+.PHONY : Game2048.cpp.s
+
+Highscore.obj: Highscore.cpp.obj
+
+.PHONY : Highscore.obj
+
+# target to build an object file
+Highscore.cpp.obj:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Highscore.cpp.obj
+.PHONY : Highscore.cpp.obj
+
+Highscore.i: Highscore.cpp.i
+
+.PHONY : Highscore.i
+
+# target to preprocess a source file
+Highscore.cpp.i:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Highscore.cpp.i
+.PHONY : Highscore.cpp.i
+
+Highscore.s: Highscore.cpp.s
+
+.PHONY : Highscore.s
+
+# target to generate assembly for a file
+Highscore.cpp.s:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Highscore.cpp.s
+.PHONY : Highscore.cpp.s
+
+Player.obj: Player.cpp.obj
+
+.PHONY : Player.obj
+
+# target to build an object file
+Player.cpp.obj:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
+
+Player.i: Player.cpp.i
+
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
+Update.obj: Update.cpp.obj
+
+.PHONY : Update.obj
+
+# target to build an object file
+Update.cpp.obj:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Update.cpp.obj
+.PHONY : Update.cpp.obj
+
+Update.i: Update.cpp.i
+
+.PHONY : Update.i
+
+# target to preprocess a source file
+Update.cpp.i:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Update.cpp.i
+.PHONY : Update.cpp.i
+
+Update.s: Update.cpp.s
+
+.PHONY : Update.s
+
+# target to generate assembly for a file
+Update.cpp.s:
+	$(MAKE) -f CMakeFiles\2048.dir\build.make CMakeFiles/2048.dir/Update.cpp.s
+.PHONY : Update.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +293,21 @@ help:
 	@echo ... 2048
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Board2048.obj
+	@echo ... Board2048.i
+	@echo ... Board2048.s
+	@echo ... Game2048.obj
+	@echo ... Game2048.i
+	@echo ... Game2048.s
+	@echo ... Highscore.obj
+	@echo ... Highscore.i
+	@echo ... Highscore.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
+	@echo ... Update.obj
+	@echo ... Update.i
+	@echo ... Update.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

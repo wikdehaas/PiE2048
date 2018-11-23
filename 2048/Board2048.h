@@ -9,36 +9,45 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-//#include "Game2048.h"
 
 using namespace std;
 
 class Board2048 {
-//public:
-
-    unsigned int size;
     vector<int> boardVector;
-    vector<int> emptyTileIndices;
-    unsigned int newTileChance;
+    bool gameOver;
+    int totalScore;
+    vector<int> tempScore;
 
     vector<int> checkEmpty(vector<int> v);
+    void createBoard();
+
+protected:
+    const unsigned int SIZE = 4;
 
 public:
-    Board2048() = default;
-    Board2048(const unsigned int);
-    void setBoardSize(unsigned const int s);
+    Board2048();
 
-    int getBoardSize();
-
-    void setBoard(vector<int> v);
+    void setBoard(vector<int> &v);
 
     vector<int> getBoard();
-
-    void createBoard();
 
     void addRandomTile();
 
     void visualizeBoard(vector<int> v);
+
+    void setGameOver(bool g);
+
+    bool getGameOver();
+
+    void setScore(int s);
+
+    int getScore();
+
+    void addScore(int score);
+
+    void setTempScore(vector<int> &scoreVec);
+
+    vector<int> getTempScore();
 };
 
 

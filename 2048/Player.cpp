@@ -6,79 +6,123 @@
 #include <iostream>
 #include <vector>
 #include <valarray>
-//#include "Update.h"
-//#include "Board2048.h"
+#include <algorithm>
+#include <iterator>
 
 using namespace std;
 
-//class Player : public Update {
-//    vector<int> newBoard;
-//public:
-    Player::Player() {
-        cout << "Player created" << endl;
+vector<int> Player::getInput(Board2048 &bo){
+    vector<int> v;
+    return v;
+}
+
+string Player::getName() {
+    return name;
+}
+
+void Player::setName(string &n){
+    name = n;
+}
+
+int ComputerPlayer::boardValueFun(vector<int> currBoard, int score) {
+    vector<int> cornerValues = {currBoard[0], currBoard[SIZE-1], currBoard[SIZE*SIZE-SIZE], currBoard[SIZE*SIZE-1]};
+    int weighFactorCV = 10;
+    auto maxElementIterator = max_element(cornerValues.begin(), cornerValues.end()); //iterator
+    int maxElement = *maxElementIterator;
+
+    int boardValue = weighFactorCV*maxElement;
+
+    int maxIndex = distance(cornerValues.begin(),maxElementIterator);
+
+    double weighFactorNT = 0.3;
+    if (maxIndex == 0){
+        boardValue += (int)(weighFactorNT*(currBoard[1]+currBoard[SIZE]+currBoard[SIZE+1]));
+    }
+    else if (maxIndex == SIZE-1) {
+        boardValue += (int)(weighFactorNT*(currBoard[SIZE-2]+currBoard[SIZE-1+SIZE]+currBoard[SIZE-2+SIZE]));
+    }
+    else if (maxIndex == SIZE*SIZE-SIZE) {
+        boardValue += (int)(weighFactorNT*(currBoard[SIZE*SIZE-SIZE+1]+currBoard[SIZE*SIZE-2*SIZE]+currBoard[SIZE*SIZE-2*SIZE+1]));
+    }
+    else if (SIZE*SIZE-1) {
+        boardValue += (int)(weighFactorNT*(currBoard[SIZE*SIZE-2]+currBoard[SIZE*SIZE-SIZE-1]+currBoard[SIZE*SIZE-SIZE-2]));
     }
 
-    vector<int> Player::getInput(Board2048){};
 
-    void Player::setNewBoard(vector<int> b) {
-        newBoard = b;
+    vector<int> nonZeroElem = removeZeroes(currBoard);
+    int weighFactorNZE = maxElement/(SIZE*SIZE);
+    boardValue -= weighFactorNZE*nonZeroElem.size();
+
+    int weighFactorS = 1;
+    boardValue += weighFactorS*score;
+
+    return boardValue;
+}
+
+int ComputerPlayer::nextStep(vector<int> &nextBoard) {
+    Board2048 tempBoard;
+    tempBoard.setBoard(nextBoard);
+    vector<vector<int>> vecNextOptions = getVectors(tempBoard);
+    vector<int> scoreNextOptions = tempBoard.getTempScore();
+    vector<int> nextBoardChoice;
+    nextBoardChoice.reserve(vecNextOptions.size());
+    for (int i = 0; i<vecNextOptions.size();i++) {
+        nextBoardChoice.push_back(boardValueFun(vecNextOptions[i],scoreNextOptions[i]));
+    }
+    int bestNextStep = *max_element(nextBoardChoice.begin(), nextBoardChoice.end());
+    return bestNextStep;
+}
+
+vector<int> ComputerPlayer::getInput(Board2048 &bo) {
+    vector<vector<int>> vecOptions = getVectors(bo);
+    vector<int> scoreOptions = bo.getTempScore();
+
+    if (vecOptions.empty()){
+        return bo.getBoard();
     }
 
-    vector<int> Player::getNewBoard() {
-        return newBoard;
-    }
-//};
+    vector<int> boardChoice;
 
-//class ComputerPlayer : public Player {
-    //public:
-    ComputerPlayer::ComputerPlayer() {
-        cout << "Computer player created" << endl;
+    for (int i = 0;i<vecOptions.size();i++) {
+        boardChoice.push_back(boardValueFun(vecOptions[i],scoreOptions[i]));
+        int bestNextStep = nextStep(vecOptions[i]);
+        double weighFactorNS = 0.7;
+        boardChoice[i] += (int)(weighFactorNS*bestNextStep);
     }
 
-    vector<int> ComputerPlayer::getInput(Board2048 bo) {
-        cout<<2131324<<endl;
-        return getNewBoard();
+    int index = distance(boardChoice.begin(),max_element(boardChoice.begin(), boardChoice.end()));
+
+    int score = scoreOptions[index];
+    bo.addScore(score);
+    return vecOptions[index];
+}
+
+vector<int> HumanPlayer::getInput(Board2048 &bo){
+    bool goodInput = false;
+    string c;
+    int index = 0;
+    vector<vector<int>> vecOptions = getVectors(bo);
+    vector<char> dirOptions = getDirections();
+    vector<int> scoreOptions = bo.getTempScore();
+
+    if (vecOptions.empty()){
+        return bo.getBoard();
     }
-//};
 
-//class HumanPlayer : public Player {
-//private:
-    HumanPlayer::HumanPlayer() {
-        cout << "Human player created" << endl;
-    }
-//    bool goodInput;
-//    vector<char> dirOptions;
-//    vector<vector<int>> vecOptions;
-//    char c;
-//    int index;
-
-//public:
-
-    vector<int> HumanPlayer::getInput(Board2048 bo){
-        goodInput = false;
-        cout << 1 << endl;
-        vecOptions.clear();
-        cout << 4 << endl;
-        vecOptions = getVectors(bo);
-        cout << 5 << endl;
-        dirOptions.clear();
-        cout << 2 << endl;
-        dirOptions = getDirections();
-        cout << 3 << endl;
-        cout << "Input your wanted directions! (w,a,s,d)" << endl;
-        while (!goodInput) {
-            cin >> c;
-            if (c != 'w' && c != 'a' && c != 's' && c != 'd') {
-                cout << "This is not a correct input!" << endl;
-            } else if (find(dirOptions.begin(), dirOptions.end(), c) != dirOptions.end()){
-                index = distance(dirOptions.begin(), find(dirOptions.begin(), dirOptions.end(), c));
-                Player::setNewBoard(vecOptions[index]);
-                goodInput = true;
-            } else {
-                cout << "This direction does not move any number" << endl;
-                goodInput = true;
-            }
+    cout << "Input your wanted directions! (w,a,s,d)" << endl;
+    while (!goodInput) {
+        getline(cin,c);
+        if (c[0] != 'w' && c[0] != 'a' && c[0] != 's' && c[0] != 'd') {
+            cout << "This is not a correct input!" << endl;
+        } else if (find(dirOptions.begin(), dirOptions.end(), c[0]) != dirOptions.end()){
+            index = distance(dirOptions.begin(), find(dirOptions.begin(), dirOptions.end(), c[0]));
+            int score = scoreOptions[index];
+            bo.addScore(score);
+            goodInput = true;
+        } else {
+            cout << "This direction does not move any number" << endl;
+            goodInput = false;
         }
-        return getNewBoard();
     }
-//};
+    return vecOptions[index];
+}

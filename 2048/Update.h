@@ -15,34 +15,25 @@ using namespace std;
 class Update : public Board2048{
     // --------------- variables -------------------------------------------
 
-    string ALLDIR;
-    vector<int> score_vec;
-    vector<char> valid_directions;
-    vector< vector<int>> allMatrix;
-    vector<int> temp_mat;
-    vector<int> matrix;
+    vector<char> validDirections;
     int score;
 
-    unsigned int SIZE;
-
-
-    // --------------- Function which removes zeros from vector -------------------------------------------
-    vector<int> removeZeroes(vector<int> tempVec);
     // --------------- Function which shifts vector -------------------------------------------
     vector<int> shiftVector(vector<int> tempVec);
 
     // --------------- Function which updates matrix -------------------------------------------
     vector<int> updateMatrix(vector<int> matrix, char direction);
 
-    int addPoint(int points);
-    int counter;
+    int addPoints(int points);
+
+protected:
+    // --------------- Function which removes zeros from vector -------------------------------------------
+    vector<int> removeZeroes(vector<int> tempVec);
+
 public:
     Update();
     vector<char> getDirections();
-
-    vector< vector<int>> getVectors(Board2048 bo);
-
-    vector<int> getPoints();
+    vector< vector<int>> getVectors(Board2048 &bo);
 };
 
 

@@ -6,162 +6,110 @@
 #include <vector>
 #include <valarray>
 #include <algorithm>
-//#include "Board2048.h"
 
 
 using namespace std;
 
-//class Update : public Board2048{
-    // --------------- variables -------------------------------------------
+Update::Update() {
+    score = 0;
+}
 
-//    vector<int> score_vec;
-//    vector<char> valid_directions;
-//    vector< vector<int>> allMatrix;
-//    vector<int> temp_mat;
-//    vector<int> matrix;
+// --------------- Function which removes zeros from vector -------------------------------------------
 
-    Update::Update() {
-        cout << "Update created" << endl;
+vector<int> Update::removeZeroes(vector<int> tempVec) {
+    vector<int> emptyZeroes;
+    for(auto i:tempVec) {
+        if (i != 0) {
+            emptyZeroes.push_back(i);
+        }
     }
-    int score = 0;
+    return emptyZeroes;
+}
+// --------------- Function which shifts vector -------------------------------------------
+vector<int> Update::shiftVector(vector<int> tempVec) {
 
-    unsigned int SIZE;
+    tempVec = removeZeroes(tempVec);
+    for (int i = 0; i < (tempVec.size() - 1)&&!tempVec.empty(); i++) {
+        if (tempVec[i] == tempVec[i + 1]) {
+            tempVec[i] = tempVec[i] * 2;
+            tempVec[i + 1] = 0;
+            addPoints(tempVec[i]);
+        }
+    }
+    tempVec = removeZeroes(tempVec);
+    tempVec.resize(SIZE);
+    return tempVec;
+}
 
-
-    // --------------- Function which removes zeros from vector -------------------------------------------
-    vector<int> Update::removeZeroes(vector<int> tempVec) {
-        for (int i = 0; i < tempVec.size(); i++) {
-            if (tempVec[i] == 0) {
-                tempVec.erase(tempVec.begin() + i);
+// --------------- Function which updates matrix -------------------------------------------
+vector<int> Update::updateMatrix(vector<int> matrix, char direction) {
+    score = 0;
+    if(direction=='w'||direction=='s'){
+        for (int i = 0; i < SIZE; i++) {
+            vector<int> tempVec(SIZE);
+            for (unsigned j = 0; j < tempVec.size(); j++) {
+                tempVec.at(j) = matrix[i + j * SIZE];
+            }
+            if (direction == 'w') {
+                tempVec = shiftVector(tempVec);
+            } else {
+                std::reverse(tempVec.begin(), tempVec.end());
+                tempVec = shiftVector(tempVec);
+                std::reverse(tempVec.begin(), tempVec.end());
+            }
+            for (int j = 0; j != tempVec.size(); ++j) {
+                matrix[i + j * SIZE] = tempVec[j];
             }
         }
-        return tempVec;
-    }
-    // --------------- Function which shifts vector -------------------------------------------
-    vector<int> Update::shiftVector(vector<int> tempVec) {
-
-        tempVec = removeZeroes(tempVec);
-        for (unsigned j = 0; j < (tempVec.size() - 1); j++) {
-            int points = 0;
-            if (tempVec[j] == tempVec[j + 1]) {
-                tempVec[j] = tempVec[j] * 2;
-                tempVec[j + 1] = 0;
-                addPoint(points + tempVec[j]);
+    }else if(direction=='a'||direction=='d') {
+        for (int i = 0; i < SIZE; i++) {
+            vector<int> tempVec(SIZE);
+            for (unsigned j = 0; j < tempVec.size(); j++) {
+                tempVec.at(j) = matrix[i * SIZE + j];
+            }
+            if (direction == 'a') {
+                tempVec = shiftVector(tempVec);
+            } else {
+                std::reverse(tempVec.begin(), tempVec.end());
+                tempVec = shiftVector(tempVec);
+                std::reverse(tempVec.begin(), tempVec.end());
+            }
+            for (int j = 0; j != tempVec.size(); ++j) {
+                matrix[i * SIZE + j] = tempVec[j];
             }
         }
-        tempVec = removeZeroes(tempVec);
-        tempVec.resize(SIZE);
-        return tempVec;
     }
+    return matrix;
+}
 
-    // --------------- Function which updates matrix -------------------------------------------
-    vector<int> Update::updateMatrix(vector<int> matrix, char direction){
-        score = 0;
-        switch(direction) {
-            case 'w':
-                for (int i = 0; i < SIZE; i++) {
-                    vector<int> tempVec(SIZE);
-                    for (unsigned j = 0; j < tempVec.size(); j++) {
-                        tempVec.at(j) = matrix[i + j * SIZE];
-                    }
-                    tempVec = shiftVector(tempVec);
-                    for (int j = 0; j != tempVec.size(); ++j) {
-                        matrix[i + j * SIZE] = tempVec[j];
-                    }
-                }
-                return matrix;
-            case 'a':
-                for (int i = 0; i < SIZE; i++) {
-                    vector<int> tempVec(SIZE);
-                    for (unsigned j = 0; j < tempVec.size(); j++) {
-                        tempVec.at(j) = matrix[i * SIZE + j];
-                    }
-                    tempVec = shiftVector(tempVec);
-                    for (int j = 0; j != tempVec.size(); ++j) {
-                        matrix[i * SIZE + j] = tempVec[j];
-                    }
-                }
-                return matrix;
-            case 's':
-                for (int i = 0; i < SIZE; i++) {
+int Update::addPoints(int points){
+    score += points;
+    return score;
 
-                    vector<int> tempVec(SIZE);
-                    for (unsigned j = 0; j < tempVec.size(); j++) {
-                        tempVec.at(j) = matrix[i + j * SIZE];
-                    }
-                    std::reverse(tempVec.begin(), tempVec.end());
-                    tempVec = shiftVector(tempVec);
-                    std::reverse(tempVec.begin(), tempVec.end());
+}
 
-                    for (int j = 0; j != tempVec.size(); ++j) {
-                        matrix[i + j * SIZE] = tempVec[j];
-                    }
+vector<char> Update::getDirections(){
+    return validDirections;
+}
 
-                }
-                return matrix;
-            case 'd':
-                for (int i = 0; i < SIZE; i++) {
-                    vector<int> tempVec(SIZE);
-                    for (unsigned j = 0; j < tempVec.size(); j++) {
-                        tempVec.at(j) = matrix[i * SIZE + j];
-                    }
-
-                    std::reverse(tempVec.begin(), tempVec.end());
-                    tempVec = shiftVector(tempVec);
-                    std::reverse(tempVec.begin(), tempVec.end());
-
-                    for (int j = 0; j != tempVec.size(); ++j) {
-                        matrix[i * SIZE + j] = tempVec[j];
-                    }
-                }
-                return matrix;
-            default:
-                return matrix;
+vector< vector<int>> Update::getVectors(Board2048 &bo){
+    const string ALLDIR = "wasd";
+    validDirections.clear();
+    vector<vector<int>> allMatrix;
+    vector<int> scoreVec;
+    vector<int> matrix = bo.getBoard();
+    for (auto i : ALLDIR){
+        vector<int> temp_mat = updateMatrix(matrix,i);
+        if (temp_mat != matrix) {
+            validDirections.push_back(i);
+            allMatrix.push_back(temp_mat);
+            scoreVec.push_back(score);
         }
     }
-
-    int Update::addPoint(int points){
-        score = score + points;
-        return score;
-
-    }
-    int counter;
-//public:
-
-    vector<char> Update::getDirections(){
-        return valid_directions;
+    bo.setTempScore(scoreVec);
+    if (validDirections.empty()) {
+        bo.setGameOver(true);
     }
 
-    vector< vector<int>> Update::getVectors(Board2048 bo){
-//        SIZE = bo.getBoardSize();
-        matrix = bo.getBoard();
-        for(auto i:matrix)
-            cout<<i<<" ";
-        counter = 0;
-        valid_directions.clear();
-        allMatrix.clear();
-        score_vec.clear();
-        ALLDIR = "wasd";
-
-        for (int i = 0; i < SIZE; i++){
-
-            temp_mat = updateMatrix( matrix, ALLDIR[i]);
-
-            if (temp_mat == matrix){
-
-            }else{
-
-                valid_directions.push_back(ALLDIR[i]);
-                allMatrix.push_back(temp_mat);
-
-                score_vec.push_back(score);
-                counter++;
-            }
-        }
-        return allMatrix;
-    }
-
-    vector<int> Update::getPoints(){
-        return score_vec;
-    }
-//};
+    return allMatrix;
+}

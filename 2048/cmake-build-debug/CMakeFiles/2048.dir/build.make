@@ -33,10 +33,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -69,19 +69,94 @@ CMakeFiles/2048.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2048.dir/main.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Documents\GitHub\PiE2048\2048\main.cpp -o CMakeFiles\2048.dir\main.cpp.s
 
+CMakeFiles/2048.dir/Game2048.cpp.obj: CMakeFiles/2048.dir/flags.make
+CMakeFiles/2048.dir/Game2048.cpp.obj: ../Game2048.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2048.dir/Game2048.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\2048.dir\Game2048.cpp.obj -c C:\Users\user\Documents\GitHub\PiE2048\2048\Game2048.cpp
+
+CMakeFiles/2048.dir/Game2048.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2048.dir/Game2048.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Documents\GitHub\PiE2048\2048\Game2048.cpp > CMakeFiles\2048.dir\Game2048.cpp.i
+
+CMakeFiles/2048.dir/Game2048.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2048.dir/Game2048.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Documents\GitHub\PiE2048\2048\Game2048.cpp -o CMakeFiles\2048.dir\Game2048.cpp.s
+
+CMakeFiles/2048.dir/Board2048.cpp.obj: CMakeFiles/2048.dir/flags.make
+CMakeFiles/2048.dir/Board2048.cpp.obj: ../Board2048.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2048.dir/Board2048.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\2048.dir\Board2048.cpp.obj -c C:\Users\user\Documents\GitHub\PiE2048\2048\Board2048.cpp
+
+CMakeFiles/2048.dir/Board2048.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2048.dir/Board2048.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Documents\GitHub\PiE2048\2048\Board2048.cpp > CMakeFiles\2048.dir\Board2048.cpp.i
+
+CMakeFiles/2048.dir/Board2048.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2048.dir/Board2048.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Documents\GitHub\PiE2048\2048\Board2048.cpp -o CMakeFiles\2048.dir\Board2048.cpp.s
+
+CMakeFiles/2048.dir/Update.cpp.obj: CMakeFiles/2048.dir/flags.make
+CMakeFiles/2048.dir/Update.cpp.obj: ../Update.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/2048.dir/Update.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\2048.dir\Update.cpp.obj -c C:\Users\user\Documents\GitHub\PiE2048\2048\Update.cpp
+
+CMakeFiles/2048.dir/Update.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2048.dir/Update.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Documents\GitHub\PiE2048\2048\Update.cpp > CMakeFiles\2048.dir\Update.cpp.i
+
+CMakeFiles/2048.dir/Update.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2048.dir/Update.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Documents\GitHub\PiE2048\2048\Update.cpp -o CMakeFiles\2048.dir\Update.cpp.s
+
+CMakeFiles/2048.dir/Player.cpp.obj: CMakeFiles/2048.dir/flags.make
+CMakeFiles/2048.dir/Player.cpp.obj: ../Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/2048.dir/Player.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\2048.dir\Player.cpp.obj -c C:\Users\user\Documents\GitHub\PiE2048\2048\Player.cpp
+
+CMakeFiles/2048.dir/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2048.dir/Player.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Documents\GitHub\PiE2048\2048\Player.cpp > CMakeFiles\2048.dir\Player.cpp.i
+
+CMakeFiles/2048.dir/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2048.dir/Player.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Documents\GitHub\PiE2048\2048\Player.cpp -o CMakeFiles\2048.dir\Player.cpp.s
+
+CMakeFiles/2048.dir/Highscore.cpp.obj: CMakeFiles/2048.dir/flags.make
+CMakeFiles/2048.dir/Highscore.cpp.obj: ../Highscore.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/2048.dir/Highscore.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\2048.dir\Highscore.cpp.obj -c C:\Users\user\Documents\GitHub\PiE2048\2048\Highscore.cpp
+
+CMakeFiles/2048.dir/Highscore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2048.dir/Highscore.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Documents\GitHub\PiE2048\2048\Highscore.cpp > CMakeFiles\2048.dir\Highscore.cpp.i
+
+CMakeFiles/2048.dir/Highscore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2048.dir/Highscore.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Documents\GitHub\PiE2048\2048\Highscore.cpp -o CMakeFiles\2048.dir\Highscore.cpp.s
+
 # Object files for target 2048
 2048_OBJECTS = \
-"CMakeFiles/2048.dir/main.cpp.obj"
+"CMakeFiles/2048.dir/main.cpp.obj" \
+"CMakeFiles/2048.dir/Game2048.cpp.obj" \
+"CMakeFiles/2048.dir/Board2048.cpp.obj" \
+"CMakeFiles/2048.dir/Update.cpp.obj" \
+"CMakeFiles/2048.dir/Player.cpp.obj" \
+"CMakeFiles/2048.dir/Highscore.cpp.obj"
 
 # External object files for target 2048
 2048_EXTERNAL_OBJECTS =
 
 2048.exe: CMakeFiles/2048.dir/main.cpp.obj
+2048.exe: CMakeFiles/2048.dir/Game2048.cpp.obj
+2048.exe: CMakeFiles/2048.dir/Board2048.cpp.obj
+2048.exe: CMakeFiles/2048.dir/Update.cpp.obj
+2048.exe: CMakeFiles/2048.dir/Player.cpp.obj
+2048.exe: CMakeFiles/2048.dir/Highscore.cpp.obj
 2048.exe: CMakeFiles/2048.dir/build.make
 2048.exe: CMakeFiles/2048.dir/linklibs.rsp
 2048.exe: CMakeFiles/2048.dir/objects1.rsp
 2048.exe: CMakeFiles/2048.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable 2048.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\user\Documents\GitHub\PiE2048\2048\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable 2048.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\2048.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
