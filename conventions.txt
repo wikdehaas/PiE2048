@@ -22,3 +22,6 @@ class NewClass {
 instances:
 NewClass appleTree
 
+//--------------------Private variables--------------------
+// adfasdfdsafdsaf
+adfkladsf // dafdaf
