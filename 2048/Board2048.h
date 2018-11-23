@@ -6,7 +6,7 @@
  * the total score (totalScore). It also contains the constant integer SIZE which dictates the board size.
  *
  * Functions used in other classes/files:
- * Game2048: setGameOver, addRandomTile, visualizeBoard, setBoard, getScore
+ * Game2048: Board2048 (constructor), setGameOver, addRandomTile, visualizeBoard, setBoard, getScore
  * Update: getBoard, setTempScore, setGameOver
  * Player: getTempScore, getBoard, addScore
  */

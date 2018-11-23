@@ -6,7 +6,7 @@
  * (player) and the maximum name length (maxNameLength).
  *
  * Functions used in other classes/files:
- * main: runGame
+ * main: Game2048 (constructor), runGame
  */
 
 #ifndef INC_2048_GAME2048_H
