@@ -10,8 +10,16 @@
 
 using namespace std;
 
+/* The class Highscore contains the variables and functions needed to add scores to a highscore list, retrieve scores
+ * from the same highscore list, and print them to the screen in descending order.
+ *
+ * Functions used in other classes/files:
+ * Game2048: Highscore (constructor), addHighscore, viewHighscore
+ */
+
 class Highscore {
-public:
+private:
+    //private variables
     struct highscore {
         string hsName;
         int hsValue;
@@ -21,18 +29,19 @@ public:
             return hsValue < a.hsValue;
         }
     };
-private:
+
     int maxNameLength;
     vector<highscore> hsList;
-    void readHighscore();
+    //private functions
+    vector<highscore> readHighscoreList();
+    void setMaxNameLength(int length);
+    void setHSList();
 
 public:
-    explicit Highscore(int length);
+    //public functions
+    explicit Highscore(int length); //Constructor
     void addHighscore(string name, int score);
     void viewHighscore();
-    void setMaxNameLength(int length);
-    void setHSList(vector<highscore> &hsl);
 };
-
 
 #endif //INC_2048_HIGHSCORE_H
